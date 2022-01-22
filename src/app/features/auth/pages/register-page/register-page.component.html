@@ -1,0 +1,17 @@
+<div class="background">
+  <div class="register-container">
+    <div class="form-container">
+      <h1>Welcome to Femhack Register</h1>
+      <h5>Register with your email</h5>
+      <femhack-auth-form (formData)="register($event)"></femhack-auth-form>
+    </div>
+    <div class="text-container">
+      <h1>Hey Buddy</h1>
+      <p>
+        Already have an awesome account? Go ahead and click the button below to
+        sign in!
+      </p>
+      <button mat-button routerLink="/">Sign in</button>
+    </div>
+  </div>
+</div>

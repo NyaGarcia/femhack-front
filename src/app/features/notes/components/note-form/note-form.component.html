@@ -1,0 +1,28 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-control">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" type="text" required />
+    <mat-error *ngIf="title?.hasError('required')">
+      Title is required
+    </mat-error>
+    <mat-error *ngIf="title?.hasError('title')">
+      Title isn't valid. Please enter a valid title.
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <mat-label>Description</mat-label>
+    <input matInput formControlName="description" type="description" required />
+    <mat-error *ngIf="description?.hasError('required')">
+      Description is required
+    </mat-error>
+  </mat-form-field>
+  <section class="example-section" formGroupName="tags">
+    <h4>Select tags:</h4>
+    <p><mat-checkbox formControlName="projects">Projects</mat-checkbox></p>
+    <p><mat-checkbox formControlName="business">Business</mat-checkbox></p>
+    <p><mat-checkbox formControlName="personal">Personal</mat-checkbox></p>
+  </section>
+  <div class="form-footer">
+    <button mat-raised-button type="submit" color="primary">Submit</button>
+  </div>
+</form>

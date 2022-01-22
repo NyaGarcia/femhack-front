@@ -1,0 +1,57 @@
+{
+  "notes": [
+    {
+      "id": "f3bfe689-a7c3-4a3a-9f84-9165038d8dba",
+      "description": "Quaerat cum dicta excepturi vitae vitae beatae voluptatibus at voluptatibus unde. Quaerat aut conse.",
+      "title": "Sed ipsum beatae vg.",
+      "tag": {
+        "name": "eos",
+        "color": "#659b27"
+      },
+      "tags": {
+        "projects": true,
+        "business": false,
+        "personal": false
+      }
+    },
+    {
+      "id": "0372cdab-b4b4-4de7-ac12-be3033fa8177",
+      "description": "Nulla beatae id sed sit, nulla, deserunt blanditiis dolores est sequi laborum consequatur excepturd.",
+      "title": "Quasi blanditiis aj.",
+      "tag": {
+        "name": "sunt",
+        "color": "#9db521"
+      }
+    },
+    {
+      "id": "f771c943-0562-4e1d-b543-d12dd1f2a173",
+      "description": "At sequi quos non aliquid non id vitae nulla error reiciendis ullam, repellat reiciendis. Neque fub.",
+      "title": "Voluptatibus est cm.",
+      "tag": {
+        "name": "eos",
+        "color": "#659b27"
+      }
+    },
+    {
+      "id": "da9f9b92-b685-4ea4-8038-db9dc8295eda",
+      "description": "Qui cupiditate unde excepturi quos id nostrum ipsum vitae quaerat quae magnam. Voluptatibus cum niu.",
+      "title": "Deserunt aut fugiaj.",
+      "tag": {
+        "name": "sunt",
+        "color": "#9db521"
+      }
+    }
+  ],
+  "users": [
+    {
+      "email": "nya@example.com",
+      "password": "$2a$10$i/wwy3XAfeNie7ZIDhGlw.gtWdPR4y/s2mJKWkcR6ajIGtge7pLqe",
+      "id": 1
+    },
+    {
+      "email": "neko@example.com",
+      "password": "$2a$10$nCFs7v4av5qmGWkAFlQakOnXO2VI2sLDaMR8ocyJefkFInE85wPXW",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="header">
+    <h1>Notes</h1>
+    <button mat-raised-button routerLink="create">Add Note</button>
+  </div>
+  <div class="content-container">
+    <div class="view-buttons">
+      <span class="view-btn" (click)="setListView()">
+        <fa-icon [icon]="faList"></fa-icon>
+      </span>
+      <span class="view-btn" (click)="setGridView()">
+        <fa-icon [icon]="faGrid"></fa-icon>
+      </span>
+    </div>
+    <ng-container *ngIf="view === 'grid'; else listView">
+      <div class="notes-container">
+        <femhack-note
+          *ngFor="let note of note$ | async"
+          [note]="note"
+          (removeEvent)="removeNote(note)"
+          (editEvent)="editNote($event)"
+        >
+        </femhack-note>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #listView>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let note of note$ | async" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ note.title }}
+        </mat-panel-title>
+        <mat-panel-description>
+          <div>
+            <ng-container *ngFor="let tag of note.tags | keyvalue">
+              <span class="tag" [ngClass]="tag.key" *ngIf="tag.value === true">
+                {{ tag.key }}
+              </span>
+            </ng-container>
+          </div>
+          <div>
+            <fa-icon [icon]="faTrash" (click)="removeNote(note)"></fa-icon>
+            <fa-icon [icon]="faEdit" (click)="editNote(note.id)"></fa-icon>
+          </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>
+        {{ note.description }}
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</ng-template>

@@ -1,0 +1,18 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <div class="sidenav-header">
+      <h1>Femhack</h1>
+    </div>
+    <div class="links-container">
+      <a routerLink="/notes"><fa-icon [icon]="faStickyNote"></fa-icon>Notes</a>
+      <a disabled><fa-icon [icon]="faTh"></fa-icon>Overview</a>
+      <a disabled><fa-icon [icon]="faCalendar"></fa-icon>Tasks</a>
+      <a disabled><fa-icon [icon]="faUser"></fa-icon>Profile</a>
+      <a disabled><fa-icon [icon]="faInfoCircle"></fa-icon>Support</a>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

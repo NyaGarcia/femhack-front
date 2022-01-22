@@ -1,0 +1,38 @@
+mat-drawer-container {
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+mat-drawer {
+  background-color: #8981d8;
+  color: #fff;
+  width: 250px;
+
+  .sidenav-header {
+    background-color: #6a61c0;
+    padding: 20px;
+
+    h1 {
+      font-weight: bolder;
+      margin-bottom: 0;
+    }
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+    a {
+      font-size: 15px;
+      font-weight: bold;
+      margin: 15px;
+      margin-left: 20px;
+
+      fa-icon {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

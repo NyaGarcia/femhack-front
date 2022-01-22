@@ -1,0 +1,18 @@
+<div class="note-container">
+  <div class="note-header">
+    <h3>{{ note.title }}</h3>
+    <div class="actions-container">
+      <fa-icon [icon]="faTrash" (click)="remove(note)"></fa-icon>
+      <fa-icon [icon]="faEdit" (click)="edit()"></fa-icon>
+    </div>
+  </div>
+
+  <p>{{ note.description }}</p>
+  <div class="tags-container">
+    <ng-container *ngFor="let tag of note.tags | keyvalue">
+      <span class="tag" [ngClass]="tag.key" *ngIf="tag.value === true">
+        {{ tag.key }}
+      </span>
+    </ng-container>
+  </div>
+</div>

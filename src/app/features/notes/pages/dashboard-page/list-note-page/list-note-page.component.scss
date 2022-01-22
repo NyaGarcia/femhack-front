@@ -1,0 +1,51 @@
+mat-panel-description {
+  display: flex;
+  justify-content: space-between;
+
+  fa-icon {
+    color: #8981d8;
+    margin-right: 10px;
+  }
+}
+
+.container {
+  padding: 20px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: #8981d8;
+      color: #fff;
+      padding: 5px 40px;
+    }
+  }
+
+  .content-container {
+    padding: 30px;
+
+    .view-buttons {
+      display: flex;
+      justify-content: end;
+      margin: 20px 0;
+
+      span:first-child {
+        margin-right: 10px;
+      }
+
+      .view-btn {
+        font-size: 20px;
+      }
+    }
+
+    .notes-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.view-btn:hover {
+  cursor: pointer;
+}
